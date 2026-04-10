@@ -1,0 +1,152 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: #212529;
+  --mid: #6c757d;
+  --light: #f8f9fa;
+  --border: #dee2e6;
+  --white: #ffffff;
+  --danger: #dc3545;
+  --blue: #0d6efd;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  color: var(--dark);
+  background: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dark);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--mid);
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: var(--dark);
+}
+
+.nav-links a.active {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  font-family: inherit;
+  border: 1.5px solid transparent;
+  white-space: nowrap;
+}
+
+.btn-outline {
+  border-color: var(--dark);
+  background: transparent;
+  color: var(--dark);
+}
+
+.btn-outline:hover,
+.btn-solid {
+  background: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+}
+
+.btn-solid:hover {
+  opacity: 0.82;
+}
+
+.btn-grey {
+  background: var(--mid);
+  color: var(--white);
+  border-color: var(--mid);
+}
+
+.btn-grey:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 22px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--mid);
+  margin-top: auto;
+}
+
+footer a {
+  color: var(--dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 12px 18px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    flex-wrap: wrap;
+  }
+}

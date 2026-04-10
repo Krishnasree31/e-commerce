@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ecommerce - Cart</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/cart.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-brand" href="index.html">Ecommerce</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="login.html" class="btn btn-outline"><i class="fa fa-sign-in-alt"></i> Login</a>
+      <a href="register.html" class="btn btn-outline"><i class="fa fa-user-plus"></i> Register</a>
+      <a href="cart.html" class="btn btn-solid"><i class="fa fa-shopping-cart"></i> Cart (3)</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="cart-section">
+
+      <h1>Cart</h1>
+      <hr />
+
+      <div class="cart-layout">
+
+        <div class="cart-box">
+          <div class="cart-box-header">Item List</div>
+
+          <div id="cartItemsList">
+
+            <div class="cart-item" id="item-1">
+              <img src="images/1.jpg" alt="Backpack" />
+              <div class="cart-item-info">
+                <h5>Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h5>
+                <div class="qty-row">
+                  <button class="qty-btn" onclick="changeQty('item-1', -1)">&#8722;</button>
+                  <span class="qty-num" id="qty-1">1</span>
+                  <button class="qty-btn" onclick="changeQty('item-1', 1)">&#43;</button>
+                </div>
+                <div class="item-sub" id="sub-1">1 x $109.95</div>
+                <button class="remove-btn" onclick="removeItem('item-1')">Remove</button>
+              </div>
+            </div>
+
+            <div class="cart-item" id="item-2">
+              <img src="images/4.jpg" alt="T-Shirts" />
+              <div class="cart-item-info">
+                <h5>Mens Casual Premium Slim Fit T-Shirts</h5>
+                <div class="qty-row">
+                  <button class="qty-btn" onclick="changeQty('item-2', -1)">&#8722;</button>
+                  <span class="qty-num" id="qty-2">1</span>
+                  <button class="qty-btn" onclick="changeQty('item-2', 1)">&#43;</button>
+                </div>
+                <div class="item-sub" id="sub-2">1 x $22.30</div>
+                <button class="remove-btn" onclick="removeItem('item-2')">Remove</button>
+              </div>
+            </div>
+
+            <div class="cart-item" id="item-3">
+              <img src="images/17.jpg" alt="Cotton Jacket" />
+              <div class="cart-item-info">
+                <h5>Mens Cotton Jacket</h5>
+                <div class="qty-row">
+                  <button class="qty-btn" onclick="changeQty('item-3', -1)">&#8722;</button>
+                  <span class="qty-num" id="qty-3">1</span>
+                  <button class="qty-btn" onclick="changeQty('item-3', 1)">&#43;</button>
+                </div>
+                <div class="item-sub" id="sub-3">1 x $55.99</div>
+                <button class="remove-btn" onclick="removeItem('item-3')">Remove</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="summary-box">
+          <h3>Order Summary</h3>
+
+          <div class="summary-row">
+            <span>Products (<span id="summaryCount">3</span>)</span>
+            <span id="summaryProducts">$188.24</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="summaryShipping">$30</span>
+          </div>
+
+          <div class="summary-row total">
+            <span>Total amount</span>
+            <span id="summaryTotal">$218.24</span>
+          </div>
+
+          <button class="checkout-btn" onclick="doCheckout()">Go to checkout</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    Made with <span style="color:#dc3545;">&#10084;</span> by <a href="#">krishna sree</a>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
